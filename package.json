@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/viralpickaxe/flight-status#readme",
   "devDependencies": {
+    "@types/history": "^4.5.0",
+    "@types/immutable": "^3.8.7",
+    "@types/react": "^15.0.23",
+    "@types/redux": "^3.6.0",
     "chai": "^3.5.0",
     "concurrently": "^3.4.0",
     "gulp": "^3.9.1",
@@ -25,11 +29,16 @@
     "gulp-sass": "^3.1.0",
     "gulp-shorthand": "^1.1.0",
     "gulp-sourcemaps": "^2.5.1",
+    "history": "^4.6.1",
+    "immutable": "^3.8.1",
     "jspm": "^0.16.53",
     "mocha": "^3.1.2",
+    "qs": "^6.4.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "typescript": "^2.2.1"
+    "redux": "^3.6.0",
+    "typescript": "^2.2.1",
+    "uniloc": "^0.3.0"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
@@ -65,8 +74,14 @@
       "baseURL": "src/client/public"
     },
     "dependencies": {
+      "history": "npm:history@^4.6.1",
+      "immutable": "npm:immutable@^3.8.1",
+      "qs": "npm:qs@^6.4.0",
       "react": "npm:react@^15.5.4",
-      "react-dom": "npm:react-dom@^15.5.4"
+      "react-dom": "npm:react-dom@^15.5.4",
+      "react-google-maps": "npm:react-google-maps@^6.3.0",
+      "redux": "npm:redux@^3.6.0",
+      "uniloc": "npm:uniloc@^0.3.0"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",

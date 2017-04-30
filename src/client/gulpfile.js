@@ -6,7 +6,7 @@ var minify = require("gulp-cssnano")
 var sourcemaps = require("gulp-sourcemaps")
 
 gulp.task("build-styles", function() {
-	console.log('hi')
+	
 	return gulp.src("./styles/index.scss")
         .pipe(sourcemaps.init())
 		.pipe(sass().on("error", sass.logError))
