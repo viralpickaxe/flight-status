@@ -3,3 +3,4 @@ node_modules
 src/client/build
 src/server/**/*.js
 src/server/**/*.js.map
+.env
