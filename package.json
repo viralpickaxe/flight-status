@@ -1,0 +1,35 @@
+{
+	"name": "flight-status",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"typescript": "concurrently \"tsc -p ./src/client\" \"tsc -p ./src/server\" \"gulp --gulpfile ./src/client/gulpfile.js build-styles\" --kill-others --names \"Client Typescript,Server Typescript,Styles\"",
+		"typescript-watch": "concurrently \"tsc -p ./src/client -w\" \"tsc -p ./src/server -w\" \"gulp --gulpfile ./src/client/gulpfile.js styles\" --kill-others --names \"Client Typescript,Server Typescript,Styles\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://viralpickaxe@github.com/viralpickaxe/flight-status.git"
+	},
+	"author": "Jamie Davies <jamie@iamjamiedavies.com> (iamjamiedavies.com)",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/viralpickaxe/flight-status/issues"
+	},
+	"homepage": "https://github.com/viralpickaxe/flight-status#readme",
+	"devDependencies": {
+		"concurrently": "^3.4.0",
+		"typescript": "^2.2.1",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "^3.1.1",
+		"gulp-cssnano": "^2.1.2",
+		"gulp-sass": "^3.1.0",
+		"gulp-shorthand": "^1.1.0",
+		"gulp-sourcemaps": "^2.5.1"
+	},
+	"dependencies": {
+		"@types/bluebird": "^3.5.2",
+		"@types/node": "^7.0.12",
+		"bluebird": "^3.5.0"
+	}
+}

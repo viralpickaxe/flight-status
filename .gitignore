@@ -1,0 +1,5 @@
+node_modules
+.DS_STORE
+src/client/build
+src/server/**/*.js
+src/server/**/*.js.map
