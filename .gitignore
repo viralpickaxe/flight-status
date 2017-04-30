@@ -1,6 +1,8 @@
 node_modules
+src/client/public/jspm_packages
 .DS_STORE
-src/client/build
+src/client/public/build
 src/server/**/*.js
 src/server/**/*.js.map
 .env
+npm-debug.log

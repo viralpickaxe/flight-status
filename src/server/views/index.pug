@@ -1,0 +1,11 @@
+html
+	head
+		title Flight Status
+		meta(name='viewport',content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+		link(ref='stylesheet',type='text/css',href='/statics/build/index.css')
+	body
+		div(id="react_mount")
+	script(src='/statics/jspm_packages/system.js')
+	script(src='/statics/config.js')
+	script.
+		System.import('/statics/build/app.js').then(function(){System.import("Main")})

@@ -18,15 +18,18 @@
   "homepage": "https://github.com/viralpickaxe/flight-status#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.1.2",
     "concurrently": "^3.4.0",
-    "typescript": "^2.2.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-sass": "^3.1.0",
     "gulp-shorthand": "^1.1.0",
-    "gulp-sourcemaps": "^2.5.1"
+    "gulp-sourcemaps": "^2.5.1",
+    "jspm": "^0.16.53",
+    "mocha": "^3.1.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "typescript": "^2.2.1"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
@@ -52,8 +55,23 @@
     "moment": "^2.18.1",
     "mongoose": "^4.9.6",
     "on-headers": "^1.0.1",
+    "pug": "^2.0.0-beta.12",
     "sinon": "^2.1.0",
     "winston": "^2.3.1",
     "winston-papertrail": "^1.0.4"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "src/client/public"
+    },
+    "dependencies": {
+      "react": "npm:react@^15.5.4",
+      "react-dom": "npm:react-dom@^15.5.4"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }

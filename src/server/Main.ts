@@ -34,43 +34,16 @@ http_server.getApplication().use(cors())
 import { AirportCollectionController } from "./endpoints/airport/AirportCollectionController"
 import { AirportObjectController } from "./endpoints/airport/AirportObjectController"
 
+import { WebappController } from "./endpoints/webapp/WebappController"
+
 // Attach the controllers for endpoints
-http_server.mount("/airports", AirportCollectionController)
-http_server.mount("/airports/:icao", AirportObjectController)
+http_server.mount("/api/airports", AirportCollectionController)
+http_server.mount("/api/airports/:icao", AirportObjectController)
+
+http_server.mount("/", WebappController)
 
 // Start the HTTP server
 http_server.start()
 
 // Create a HTTP Runtime to run this server - use default grace periods for Heroku
 new ServerRuntime(http_server)
-
-// import { Airport } from "./models/Airport"
-
-// var parse = require('csv-parse')
-// var fs = require('fs')
-
-// fs.readFile( __dirname + "/airports.csv", function (err, data) {
-
-// 	data = data.toString()
-
-// 	parse(data, {escape: "\\"}, function(err, output){
-// 		output.map((a) => {
-
-// 			Airport.create({
-// 				name: a[1],
-// 				icao: a[5],
-// 				city: a[2],
-// 				country: a[3],
-// 				coordinates: [a[6],a[7]],
-// 				altitude: a[8]
-// 			})
-// 				.then((a) => {
-// 					console.log(a.icao)
-// 				})
-// 				.catch((err) => {
-// 					console.log(err)
-// 				})
-
-// 		})
-// 	})
-// })

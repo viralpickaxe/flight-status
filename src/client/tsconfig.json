@@ -6,8 +6,9 @@
         "removeComments": true,
         "preserveConstEnums": true,
         "alwaysStrict": true,
+        "jsx": "react",
         "target": "es5",
-        "outFile": "./build/app.js",
+        "outFile": "./public/build/app.js",
         "sourceMap": true
     },
     "include": [

@@ -7,7 +7,7 @@ var sourcemaps = require("gulp-sourcemaps")
 
 gulp.task("build-styles", function() {
 	console.log('hi')
-	return gulp.src("./resources/styles/index.scss")
+	return gulp.src("./styles/index.scss")
         .pipe(sourcemaps.init())
 		.pipe(sass().on("error", sass.logError))
 		.pipe(autoprefixer({
@@ -17,13 +17,13 @@ gulp.task("build-styles", function() {
 		.pipe(shorthand())
 		.pipe(minify())
         .pipe(sourcemaps.write("."))
-		.pipe(gulp.dest("./build"))
+		.pipe(gulp.dest("./public/build"))
 
 })
 
 gulp.task("watch-styles", function() {
 
-    gulp.watch("resources/styles/**/*.scss", ["build-styles"])
+    gulp.watch("styles/**/*.scss", ["build-styles"])
 
 })
 

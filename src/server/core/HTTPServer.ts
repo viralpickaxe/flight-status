@@ -1,6 +1,7 @@
 import { Server } from "net"
 import * as Express from "express"
 import * as Helmet from "helmet"
+import * as path from "path"
 import { HTTPController } from "./HTTPController"
 
 /**
@@ -65,6 +66,11 @@ export class HTTPServer {
 		// Set the application performance and optimization level based on the environment. 
 		// Defaults to no optimizations.
 		this.express_application.set("env", process.env.NODE_ENV || "development")
+
+		// Enable frontend views and public
+		this.express_application.set("views", path.join(__dirname, "../", "views"))
+		this.express_application.set("view engine", "pug")
+		this.express_application.use("/statics", Express.static(path.join(__dirname, "../../client/public")))
 
 		// End the function
 		return;
