@@ -10,3 +10,33 @@ body {
 	height: 100vh;
 
 }
+
+.AirportWindow {
+
+	width: 250px;
+	text-align: center;
+	padding: 15px 0 15px 15px;
+
+	.AirportWindow_icao {
+
+		font-size: 30px;
+		font-weight: 500;
+
+	}
+
+	.AirportWindow_name {
+
+		font-size: 20px;
+		font-weight: 300;
+
+	}
+
+	.AirportWindow_map {
+
+		width: 100%;
+		//min-height: 145px;
+		margin-top: 20px;
+
+	}
+
+}

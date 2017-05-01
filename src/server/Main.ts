@@ -47,3 +47,30 @@ http_server.start()
 
 // Create a HTTP Runtime to run this server - use default grace periods for Heroku
 new ServerRuntime(http_server)
+
+// import { Airport } from "./models/Airport"
+
+// var parse = require('csv-parse')
+// var fs = require('fs')
+
+// fs.readFile( __dirname + "/airports.csv", function (err, data) {
+
+// 	data = data.toString()
+
+// 	parse(data, {columns: true}, function(err, output){
+
+// 		output.map((a) => {
+
+// 			Airport.findOne({icao: a.ident})
+// 				.then((airport) => {
+// 					airport.type = a.type
+// 					airport.save()
+// 				})
+// 				.catch(() => {})
+
+// 		})
+
+// 		console.log('done')
+
+// 	})
+// })

@@ -5,6 +5,7 @@ import { mongoose } from "../database"
 
 export interface IAirport extends Document {
 	name: String,
+	type: String,
 	icao: String,
 	city: String,
 	country: String,
@@ -22,6 +23,10 @@ const schema = new Schema({
 	name: {
 		type: String,
 		required: true
+	},
+	type: {
+		type: String,
+		index: true,
 	},
 	icao: {
 		type: String,
@@ -51,6 +56,7 @@ schema.methods.toResponse = function() {
 
 	return {
 		name: this.name,
+		type: this.type,
 		icao: this.icao,
 		city: this.city,
 		country: this.country,

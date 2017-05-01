@@ -14,6 +14,7 @@ System.config({
   },
 
   map: {
+    "axios": "npm:axios@0.16.1",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.7",
@@ -82,6 +83,15 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2",
       "util": "npm:util@0.10.3"
     },
+    "npm:axios@0.16.1": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.1",
+      "follow-redirects": "npm:follow-redirects@1.2.3",
+      "https": "github:jspm/nodelibs-https@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.2",
+      "url": "github:jspm/nodelibs-url@0.1.0",
+      "zlib": "github:jspm/nodelibs-zlib@0.1.0"
+    },
     "npm:babel-runtime@5.8.38": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
@@ -119,6 +129,9 @@ System.config({
     "npm:core-util-is@1.0.2": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.1"
     },
+    "npm:debug@2.6.6": {
+      "ms": "npm:ms@0.7.3"
+    },
     "npm:domain-browser@1.1.7": {
       "events": "github:jspm/nodelibs-events@0.1.1"
     },
@@ -135,6 +148,14 @@ System.config({
       "promise": "npm:promise@7.1.1",
       "setimmediate": "npm:setimmediate@1.0.5",
       "ua-parser-js": "npm:ua-parser-js@0.7.12"
+    },
+    "npm:follow-redirects@1.2.3": {
+      "assert": "github:jspm/nodelibs-assert@0.1.0",
+      "debug": "npm:debug@2.6.6",
+      "http": "github:jspm/nodelibs-http@1.7.1",
+      "https": "github:jspm/nodelibs-https@0.1.0",
+      "stream": "github:jspm/nodelibs-stream@0.1.0",
+      "url": "github:jspm/nodelibs-url@0.1.0"
     },
     "npm:history@4.6.1": {
       "invariant": "npm:invariant@2.2.2",
