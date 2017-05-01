@@ -69,8 +69,10 @@
     "on-headers": "^1.0.1",
     "pug": "^2.0.0-beta.12",
     "sinon": "^2.1.0",
+    "socket.io": "^1.7.3",
     "winston": "^2.3.1",
-    "winston-papertrail": "^1.0.4"
+    "winston-papertrail": "^1.0.4",
+    "xplane-udp": "^2.0.0"
   },
   "jspm": {
     "directories": {
@@ -85,6 +87,7 @@
       "react-dom": "npm:react-dom@^15.5.4",
       "react-google-maps": "npm:react-google-maps@^6.3.0",
       "redux": "npm:redux@^3.6.0",
+      "socket.io-client": "npm:socket.io-client@^1.7.3",
       "uniloc": "npm:uniloc@^0.3.0"
     },
     "devDependencies": {

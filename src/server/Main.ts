@@ -1,5 +1,6 @@
 require('dotenv').load()
 
+import { XPlaneClient } from "xplane-udp"
 import { HTTPServer } from "./core/HTTPServer"
 import { ServerRuntime } from "./core/ServerRuntime"
 import { json } from "body-parser"
@@ -54,29 +55,17 @@ http_server.start()
 // Create a HTTP Runtime to run this server - use default grace periods for Heroku
 new ServerRuntime(http_server)
 
-// import { Airport } from "./models/Airport"
+// Live plane location
 
-// var parse = require('csv-parse')
-// var fs = require('fs')
+import * as SocketIO from "socket.io"
 
-// fs.readFile( __dirname + "/airports.csv", function (err, data) {
+let io = new SocketIO(http_server['underlying_server'])
 
-// 	data = data.toString()
+let xplane_client = new XPlaneClient(12345)
 
-// 	parse(data, {columns: true}, function(err, output){
+xplane_client.start()
+xplane_client.on("updated", (data) => {
 
-// 		output.map((a) => {
+	io.emit("updated", data)
 
-// 			Airport.findOne({icao: a.ident})
-// 				.then((airport) => {
-// 					airport.type = a.type
-// 					airport.save()
-// 				})
-// 				.catch(() => {})
-
-// 		})
-
-// 		console.log('done')
-
-// 	})
-// })
+})

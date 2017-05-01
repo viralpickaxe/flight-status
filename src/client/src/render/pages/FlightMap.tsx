@@ -2,6 +2,9 @@ import { Component } from "react"
 import React from "react"
 import axios from "axios"
 const Gmaps = window['google']
+import io from "socket.io-client"
+
+var socket = io()
 
 interface PropsType {
 	planId: string
@@ -69,6 +72,31 @@ export class FlightMapPage extends Component<PropsType, StateType> {
 		})
 
 		this.map_elements.airport_info = new Gmaps.maps.InfoWindow()
+
+		this.map_elements.aircraft = new Gmaps.maps.Marker({
+			position: {lat: 0, lng: 0},
+			map: this.map,
+			icon: {
+				url: '/statics/images/aircraft/00.png',
+				scaledSize: new Gmaps.maps.Size(40, 40),
+				anchor: new Gmaps.maps.Point(20, 20)
+			}
+		})
+
+		socket.on("updated", (data) => {
+
+			let icon = this.map_elements.aircraft.icon
+
+			icon.url = `/statics/images/aircraft/${String(Math.round(data.attitude.truehdg / 10))['padStart'](2, '0')}.png`
+
+			this.map_elements.aircraft.setIcon(icon)
+
+			this.map_elements.aircraft.setPosition({
+				lat: data.globalposition.lat,
+				lng: data.globalposition.lon
+			})
+
+		})
 
 	}
 
