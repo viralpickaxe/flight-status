@@ -34,13 +34,19 @@ http_server.getApplication().use(cors())
 import { AirportCollectionController } from "./endpoints/airport/AirportCollectionController"
 import { AirportObjectController } from "./endpoints/airport/AirportObjectController"
 
+import { PlanCollectionController } from "./endpoints/plan/PlanCollectionController"
+import { PlanObjectController } from "./endpoints/plan/PlanObjectController"
+
 import { WebappController } from "./endpoints/webapp/WebappController"
 
 // Attach the controllers for endpoints
 http_server.mount("/api/airports", AirportCollectionController)
 http_server.mount("/api/airports/:icao", AirportObjectController)
 
-http_server.mount("/", WebappController)
+http_server.mount("/api/plans", PlanCollectionController)
+http_server.mount("/api/plans/:id", PlanObjectController)
+
+http_server.mount("/*", WebappController)
 
 // Start the HTTP server
 http_server.start()

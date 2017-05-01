@@ -33,5 +33,6 @@ export default (state, action) => {
 }
 
 const router = Uniloc({
-	index: "GET /"
+	index: "GET /",
+	planMap: "GET /plans/:id"
 })

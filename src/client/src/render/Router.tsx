@@ -16,7 +16,11 @@ export class Router extends Component<PropsType, Object> {
 
 		if ( router.get("active_route") === "index" ) {
 
-			return <FlightMapPage />
+			return <div></div>
+
+		} else if ( router.get("active_route") === "planMap" ) {
+
+			return <FlightMapPage planId={router.getIn(["options", "id"])} />
 
 		}
 
